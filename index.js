@@ -50,6 +50,7 @@ function lakukanLooping(arrPegawai) {
   */
   let komentar = "";
 
+  //Tantangan
   for(let i = 0; i < dataYangAkanDilooping.length; i++){
     let pegawai = "";
 
@@ -58,9 +59,19 @@ function lakukanLooping(arrPegawai) {
     hasilLooping.push(pegawai);
 
     if (dataYangAkanDilooping[i].jenisKelamin === "M") {
-        jumlahPria += 1;
+      jumlahPria += 1;
     }else if (dataYangAkanDilooping[i].jenisKelamin === "F") {
-        jumlahWanita += 1;
+      jumlahWanita += 1;
+    }
+  }
+
+  if (jumlahPria == jumlahWanita) {
+    komentar = "Jumlah Pria dan Wanita berimbang";
+  } else {
+    if (jumlahPria > jumlahWanita) {
+      komentar = "Jumlah Pria lebih banyak dari Wanita";
+    } else {
+      komentar = "Jumlah Wanita lebih banyak dari Pria";
     }
   }
 
